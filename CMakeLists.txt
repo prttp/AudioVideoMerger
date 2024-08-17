@@ -6,4 +6,4 @@ find_package(ffmpeg REQUIRED)
 message("Building with CMake version: ${CMAKE_VERSION}")
 
 add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} ffmpeg::ffmpeg)
+target_link_libraries(${PROJECT_NAME} ffmpeg::avcodec ffmpeg::avformat ffmpeg::avfilter ffmpeg::avdevice ffmpeg::swresample ffmpeg::swscale ffmpeg::avutil)
