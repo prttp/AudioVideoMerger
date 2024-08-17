@@ -7,7 +7,7 @@ class ExampleRecipe(ConanFile):
     generators = "CMakeDeps", "CMakeToolchain"
 
     def requirements(self):
-        self.requires("ffmpeg/4.4.4")
+        self.requires("ffmpeg/7.0.1")
 
     def layout(self):
         cmake_layout(self)
