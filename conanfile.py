@@ -5,7 +5,7 @@ from conan.tools.cmake import cmake_layout
 class ExampleRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "CMakeDeps", "CMakeToolchain"
-    requires = "ffmpeg/5.1.3"
+    requires = "ffmpeg/[>5.1.3]"
     default_options = {
         "ffmpeg/*:shared": True,
         "ffmpeg/*:with_asm": False,
@@ -26,7 +26,7 @@ class ExampleRecipe(ConanFile):
         "ffmpeg/*:with_libmp3lame": False,
         "ffmpeg/*:with_libfdk_aac": False,
         "ffmpeg/*:with_libwebp": False,
-        "ffmpeg/*:with_ssl": "openssl",
+        "ffmpeg/*:with_ssl": False,
         "ffmpeg/*:with_libalsa": False,
         "ffmpeg/*:with_pulse": False,
         "ffmpeg/*:with_vaapi": False,
